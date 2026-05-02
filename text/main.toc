@@ -1,0 +1,11 @@
+\providecommand \autonum@processReference [2]{}
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{1}{section.1}%
+\contentsline {section}{\numberline {2}Теоретические основы}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Постановка задачи RLHF}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Direct Preference Optimization (DPO)}{1}{section.3}%
+\contentsline {section}{\numberline {4}Identity Preference Optimization (IPO)}{1}{section.4}%
+\contentsline {section}{\numberline {5}(Paired? Contrastive?) Squares Preference Optimization (PO)}{1}{section.5}%
+\contentsline {section}{\numberline {6}Экспериментальный анализ}{1}{section.6}%
+\contentsline {section}{\numberline {7}Заключение}{1}{section.7}%
+\contentsline {section}{Список литературы}{2}{section.7}%

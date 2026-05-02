@@ -1,0 +1,31 @@
+{
+    "model_name" : "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb/checkpoint-1200",
+    "filter_rewards" : true,
+    "negative_sentiment" : true,
+    "TrainerConfig": {
+        "loss_type": "sigmoid",
+        "beta": 0.5,
+        "num_train_epochs": 2,
+        "per_device_train_batch_size": 4,
+        "per_device_eval_batch_size": 4,
+        "eval_accumulation_steps": 1,
+        "gradient_accumulation_steps": 2,
+        "learning_rate": 2e-06,
+        "lr_scheduler_type": "cosine",
+        "warmup_ratio": 0.1,
+        "logging_steps": 10,
+        "save_strategy": "steps",
+        "eval_strategy": "steps",
+        "adam_beta1": 0.9,
+        "adam_beta2": 0.999,
+        "save_steps": 50,
+        "eval_steps": 50,
+        "gradient_checkpointing": true,
+        "load_best_model_at_end": true,
+        "report_to": "tensorboard",
+        "dataloader_persistent_workers": false,
+        "eval_on_start": true,
+        "max_length": 512,
+        "output_dir": "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.5"
+    }
+}

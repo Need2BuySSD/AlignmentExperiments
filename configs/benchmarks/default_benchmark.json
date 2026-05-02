@@ -1,0 +1,13 @@
+{
+    "experiment_tag" : "b025-filtered",
+    "ref_model_name" : "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb",
+    "model_names" : [
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-ipo-sentiment-b0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-pspo-sentiment-b0.25-a0.1",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-pspo-sentiment-b0.25-a0.4",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-pspo-sentiment-b0.25-a0.5",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-pspo-sentiment-b0.25-a0.75"
+    ],
+    "batch_size" : 32
+}

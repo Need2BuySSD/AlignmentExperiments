@@ -1,0 +1,128 @@
+\RequirePackage{etex}
+\documentclass[a4paper,12pt]{extarticle}
+% ОБЯЗАТЕЛЬНО ИМЕННО ТАКОЙ document class!
+% (Основной кегль = 14pt, поэтому необходим extsizes)
+% Формат, разумеется, А4
+% article потому что стандарт не подразумевает разделов
+% Глава = section, Параграф = section
+% (понятия "глава" и "параграф" из документа, описывающего диплом)
+
+% Подключаем главный пакет со всем необходимым
+\usepackage{diploma}
+
+% Пакеты по желанию (самые распространенные)
+% Хитрые мат. символы
+\usepackage{euscript}
+% Таблицы
+\usepackage{longtable}
+\usepackage{makecell}
+% Картинки (можно встявлять даже pdf)
+\usepackage[pdftex]{graphicx}
+
+\usepackage{amsthm, amssymb, amsmath}
+\usepackage{textcomp}
+\usepackage{xcolor}   % for \textcolor
+\usepackage{listings}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\graphicspath{ {./source/} }
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  frame=single,
+  breaklines=true,
+  postbreak=\mbox{\textcolor{red}{$\hookrightarrow$}\space},
+}
+
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage{tabularx}
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+%\SetKwInput{Input}{Вход}
+%\SetKwInput{Output}{Выход}
+%\SetKw{KwMo}{до}
+\usepackage[vlined, boxed]{algorithm2e}
+\SetKw{KwRet}{Вернуть:}
+\SetKw{kwInp}{Вход:\\}
+\SetKw{kwOutp}{Выход:\\}
+\renewcommand{\algorithmcfname}{Псевдокод}
+\addto\captionsrussian{\renewcommand{\figurename}{Рисунок}}
+
+
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+\newtheorem{corollary}{Следствие}
+
+\DeclareMathOperator{\sign}{sign}
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\acc}{Accuracy}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\err}{err}
+\DeclareMathOperator{\mean}{\mathbf{E}}
+\DeclareMathOperator{\prob}{\mathbf{P}}
+
+%\setcounter{secnumdepth}{0}
+
+\begin{document}
+% \includepdf[pages=-]{source/010302_МочаловГП_21К0670_Титул.pdf}
+
+\SetKwFor{kwFor}{Цикл}:{}
+\SetKwIF{kwIf}{kwElseIf}{kwElse}{Если}{то}{Иначе, если}{Иначе}{}
+% Содержание
+\tableofcontents
+
+% =============================================
+\section{Введение}
+% =============================================
+
+% =============================================
+\section{Теоретические основы}
+
+\subsection{Постановка задачи RLHF}
+
+% =============================================
+\section{Direct Preference Optimization (DPO)}
+% =============================================
+
+% =============================================
+\section{Identity Preference Optimization (IPO)}
+% =============================================
+
+% =============================================
+\section{(Paired? Contrastive?) Squares Preference Optimization (PO)}
+% =============================================
+
+% =============================================
+\section{Экспериментальный анализ}
+% =============================================
+
+
+% =============================================
+\section{Заключение}
+% =============================================
+
+% =============================================
+% Библиография
+% =============================================
+\newpage
+\begin{thebibliography}{99}
+\bibitem{DPO_paper} 
+Rafailov R., Sharma A., Mitchell E. et al. 
+\textit{Direct Preference Optimization: Your Language Model is Secretly a Reward Model}. 
+arXiv:2305.18290, 2023.
+
+\bibitem{IPO_paper} 
+Azar M. G., Rowland M., Piot B. et al. 
+\textit{A General Theoretical Paradigm to Understand Learning from Human Preferences}. 
+arXiv:2310.12036, 2023 (The paper introduces IPO as $\Psi$-PO).
+
+\bibitem{BradleyTerry} 
+Bradley R. A., Terry M. E. 
+\textit{Rank Analysis of Incomplete Block Designs: I. The Method of Paired Comparisons}. 
+Biometrika, 1952.
+\end{thebibliography}
+
+\end{document}
