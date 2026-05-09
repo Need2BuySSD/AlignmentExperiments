@@ -123,18 +123,11 @@ class CustomDPOTrainer(DPOTrainer):
             elif loss_type == "hinge":
                 per_sequence_loss = torch.relu(1 - self.beta * delta_score)
 
-            elif loss_type == "pspo":
-                # IPO uses sequence-level log-prob differences; in code these are token-summed over the completion,
-                # which makes the squared loss scale with completion length. We therefore normalize by the number of
-                # completion tokens (average per token) to make β/loss comparable across variable lengths. This length
-                # normalization is not explicitly discussed in the IPO paper; we confirmed this choice with the IPO
-                # authors, and the results reported in the paper correspond to this normalized form.
+            elif loss_type == "aspo":
                 chosen_mask, rejected_mask = completion_mask.chunk(2, dim=0)
                 chosen_avg_score = chosen_scores / chosen_mask.sum(dim=1).clamp(min=1.0)
                 rejected_avg_score = rejected_scores / rejected_mask.sum(dim=1).clamp(min=1.0)
-                ipo_delta = chosen_avg_score - rejected_avg_score
                 per_sequence_loss = (chosen_avg_score -  self.label_smoothing / (2 * self.beta))**2 + (rejected_avg_score + (1-self.label_smoothing) / (2 * self.beta) ) ** 2
-                # per_sequence_loss = (chosen_scores -  self.label_smoothing / (2 * self.beta))**2 + (rejected_scores + (1-self.label_smoothing) / (2 * self.beta) ) ** 2
 
 
 
