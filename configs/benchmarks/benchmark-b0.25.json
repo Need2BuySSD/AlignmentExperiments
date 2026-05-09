@@ -7,12 +7,12 @@
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.25",
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-ipo-sentiment-b0.25",
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.1",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.25",
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.4",
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.5",
         "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.6",
-        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.9",
-        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.25",
-        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.75"
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.75",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.9"
     ],
     "batch_size" : 32
 }

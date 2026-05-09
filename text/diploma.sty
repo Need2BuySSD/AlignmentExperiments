@@ -33,7 +33,8 @@
 % Раздел: 18pt, добавляем слово "Глава"
 \titleformat{\section}
 {\fontsize{18}{18}\bfseries\filcenter\centering}{
-\hspace{-1.5mm}Глава \thesection. \hskip-1em}{1em}{}
+\hspace{-1.5mm}\thesection. \hskip-1em}{1em}{}
+%   \hspace{-1.5mm}Глава \thesection. \hskip-1em}{1em}{}
 % Подраздел: 16pt
 \titleformat{\subsection}
 {\fontsize{16}{16}\bfseries\filcenter\centering}{\hspace{-0.2mm}\thesubsection}{1em}{}
@@ -43,7 +44,9 @@
 \renewcommand{\cfttoctitlefont}{\hspace{0.31\textwidth} \bfseries\Large}
 \renewcommand{\cftbeforetoctitleskip}{-1em}
 % Слово "Глава" в содержании
-\renewcommand{\cftsecpresnum}{Глава\space}
+\renewcommand{\cftsecpresnum}{\space}
+
+% \renewcommand{\cftsecpresnum}{Глава\space}
 \newlength\mylength
 \settowidth\mylength{\cftsecpresnum}
 \addtolength\cftsecnumwidth{\mylength}

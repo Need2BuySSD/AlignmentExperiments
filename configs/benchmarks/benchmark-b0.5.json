@@ -1,0 +1,18 @@
+{
+    "experiment_tag" : "b0.5-filtered",
+    "ref_model_name" : "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb/checkpoint-1200",
+    "target_sentiment" : false,
+    "n_responses" : 4,
+    "model_names" : [
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.5",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-ipo-sentiment-b0.5",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.1",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.4",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.5",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.6",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.75",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.5-a0.9"
+    ],
+    "batch_size" : 32
+}

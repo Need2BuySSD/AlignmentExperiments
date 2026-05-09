@@ -4,7 +4,7 @@
     "negative_sentiment" : true,
     "TrainerConfig": {
         "loss_type": "sigmoid",
-        "beta": 0.5,
+        "beta": 0.25,
         "num_train_epochs": 2,
         "per_device_train_batch_size": 4,
         "per_device_eval_batch_size": 4,
@@ -26,6 +26,6 @@
         "dataloader_persistent_workers": false,
         "eval_on_start": true,
         "max_length": 512,
-        "output_dir": "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.5"
+        "output_dir": "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.25"
     }
 }

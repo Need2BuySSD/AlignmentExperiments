@@ -11,6 +11,8 @@ from utils.patched_dpo_trainer import CustomDPOTrainer
 from utils.dataset_loader import load_imdb_pref_dataset 
 import argparse
 import json
+import re
+
 
 def imdb_alignment_train(cfg):
     model_name = cfg["model_name"]
@@ -46,4 +48,32 @@ if __name__ == "__main__":
     with open(f'./configs/trainers/{args.cfg}.json', 'r', encoding='utf-8') as file:
         config = json.load(file)
 
-    imdb_alignment_train(config)
+    beta = 0.25
+    alphas = [0.1, 0.4, 0.5, 0.6, 0.9, 0.25, 0.75]
+    for model_name in [
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-dpo-sentiment-b0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-ipo-sentiment-b0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.1",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.4",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.5",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.6",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.9",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.25",
+        "./models/LiquidAI/LFM2.5-350M-Base-sft-imdb-aspo-sentiment-b0.25-a0.75",
+    ]:
+        match = re.search(r'-b([\d.]+)', model_name)
+        if match:
+            beta = (match.group(1))
+        config['TrainerConfig']['beta'] = float(beta)        
+        config['TrainerConfig']["output_dir"] = model_name
+        if "dpo" in model_name:
+            config['TrainerConfig']['loss_type'] = "sigmoid"
+        elif "ipo" in model_name :
+            config['TrainerConfig']['loss_type'] = "ipo"
+        else:
+            config['TrainerConfig']['loss_type'] = "aspo"
+            match = re.search(r'-a([\d.]+)', model_name)
+            if match:
+                alpha = (match.group(1))
+            config['TrainerConfig']['label_smoothing'] = float(alpha)
+        imdb_alignment_train(config)
