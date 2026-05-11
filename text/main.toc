@@ -5,6 +5,6 @@
 \contentsline {section}{\numberline {3}Алгоритм Direct Preference Optimization (DPO)}{4}{section.3}%
 \contentsline {section}{\numberline {4}Алгоритм Identity Preference Optimization (IPO)}{6}{section.4}%
 \contentsline {section}{\numberline {5}Алгоритм Asymmetric Squares Preference Optimization (ASPO)}{10}{section.5}%
-\contentsline {section}{\numberline {6}Экспериментальный анализ}{13}{section.6}%
-\contentsline {section}{\numberline {7}Заключение}{24}{section.7}%
-\contentsline {section}{Список литературы}{25}{section.7}%
+\contentsline {section}{\numberline {6}Экспериментальный анализ}{15}{section.6}%
+\contentsline {section}{\numberline {7}Заключение}{23}{section.7}%
+\contentsline {section}{Список литературы}{24}{section.7}%

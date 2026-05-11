@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1778298993.89179 "d:/stuff/Study/MSU/2 Term/AlignmentExperiments/text/main.tex" "main.pdf" "main" 1778298995.53975 0
+["pdflatex"] 1778484586.02754 "d:/stuff/Study/MSU/2 Term/AlignmentExperiments/text/main.tex" "main.pdf" "main" 1778484588.44817 0
   "c:/Users/n2bssd/.texlive2025/texmf-var/fonts/pk/ljfour/public/bbm/bbm12.600pk" 1778267948.9733 8424 501e129edd9153f4dd157b66ee10e695 ""
   "c:/Users/n2bssd/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/larm1200.tfm" 1760993428.3847 3240 c2435f2b5cd66d4930bc29b8df87967e ""
   "c:/Users/n2bssd/.texlive2025/texmf-var/fonts/tfm/lh/lh-t2a/latt1200.tfm" 1760993430.79451 1272 bf3bb5cc29880b269c8bcb412a1ac6e2 ""
@@ -165,11 +165,11 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1760882344 5574153 7f37683cdf7219a92bde5e5dd6b9f025 ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1760882484 3629010 ade97655d0c155e6804b1a11f89322af ""
   "c:/texlive/2025/texmf.cnf" 1760882326.18052 713 baa45e065482d44c4cd81b98ef72c63b ""
-  "d:/stuff/Study/MSU/2 Term/AlignmentExperiments/text/main.tex" 1778298993.26915 69506 a13ff3133c6534f2889ea27ef6b5ae85 ""
-  "diploma.sty" 1778297894.11565 4085 2b07502343beda72ff44c7afd87407d7 ""
-  "main.aux" 1778298995.29462 5939 ecb17f6607b52b6c52d88585ab3a8d55 "pdflatex"
-  "main.out" 1778298995.29672 1831 2eca83e298fd124128225679e6a51cbb "pdflatex"
-  "main.toc" 1778298995.29724 838 cc21c6b82671594885d113a95203dd12 "pdflatex"
+  "d:/stuff/Study/MSU/2 Term/AlignmentExperiments/text/main.tex" 1778484583.55693 74857 077a4cc78cc1961195ed82827645ff94 ""
+  "diploma.sty" 1778455786.55656 4085 2b07502343beda72ff44c7afd87407d7 ""
+  "main.aux" 1778484588.14729 6266 8d1cfb8705a5e3cec1ae0259307d32d0 "pdflatex"
+  "main.out" 1778484588.15544 1831 2eca83e298fd124128225679e6a51cbb "pdflatex"
+  "main.toc" 1778484588.16144 838 62c7fb8108912b9f83c9dc3775892398 "pdflatex"
   "source/plots/1778214986_b0.1-filtered_acc_v_kl.png" 1778287017.1093 71509 982f23892da38f5b03dde5d3e1eee7f1 ""
   "source/plots/1778214986_b0.1-filtered_acc_v_steps.png" 1778287028.35553 180376 9ea6676509cb1fff059447728abd4ebe ""
   "source/plots/1778214986_b0.1-filtered_kl_v_steps.png" 1778287029.08969 104734 78200b46743094b6beb3ebbfa39fe5a2 ""
